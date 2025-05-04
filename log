@@ -5,3 +5,16 @@ test.c:6:8: error: '_strdup' redeclared without dllimport attribute: previous dl
       |        ^~~~~~~
 cc1.exe: all warnings being treated as errors
 5729e4d
+Sun, May  4, 2025 19:47:41: 
+ treemap.c | 38 +++++++++++++++++++++++++++++++++++---
+ 1 file changed, 35 insertions(+), 3 deletions(-)
+Compilation failed
+test.c:6:8: error: '_strdup' redeclared without dllimport attribute: previous dllimport ignored [-Werror=attributes]
+    6 | char * _strdup(const char * str) {
+      |        ^~~~~~~
+In file included from test.c:4:
+treemap.c:50:10: error: 'insertTreeMap' defined but not used [-Werror=unused-function]
+   50 |     void insertTreeMap(TreeMap * tree, void* key, void * value) {
+      |          ^~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+8bf656b
